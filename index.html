@@ -1,20 +1,41 @@
-<!--index.html-->
-
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <title>你好!</title>
-  </head>
-  <body>
-    <h1>你好!</h1>
-    我们正在使用 Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    和 Electron <span id="electron-version"></span>.
 
-    <!-- 您也可以此进程中运行其他文件 -->
-    <script src="./renderer.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <title>Hello World!</title>
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+  <link rel="stylesheet" type="text/css" href="./styles.css">
+</head>
+
+<body>
+  <div id="header">
+    <p>header</p>
+  </div>
+
+  <div id="group_l">
+    <h1>H1标题</h1>
+    <p>Node.js <span id="node-version"></span></p>
+    <p>Chromium <span id="chrome-version"></span></p>
+    <p>Electron <span id="electron-version"></span></p>
+  </div>
+
+  <div id="group_split">
+  </div>
+
+  <div id="group_r">
+    <!-- 主题切换 -->
+    <p>Current theme source: <strong id="theme-source">System</strong></p>
+    <button id="toggle-dark-mode">Toggle Dark Mode</button>
+    <button id="reset-to-system">Reset to System Theme</button>
+    <hv />
+  </div>
+
+  <div id="footer">
+    <p>footer</p>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+
 </html>
