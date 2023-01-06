@@ -3,6 +3,11 @@
 - 使用 `npm run build` 编译生成 `dist` 前端项目资源
 - 运行 Electron `npx electron .` 或使用 `.vscode\launch.json` F5运行
 
+# 国内npm镜像
+- 参考：https://registry.npmmirror.com/
+- 临时修改(阿里镜像)：`npm install xxx --registry https://registry.npm.taobao.org/`
+- 全局修改(阿里镜像)：`npm config set registry https://registry.npm.taobao.org/`
+
 # Vue
 - 参考：https://github.com/vuejs/create-vue
 - 脚手架：`npm create vue@3`
@@ -22,3 +27,18 @@
     - 资源文件改为相对路径 (vue.config.js) `publicPath: './'`
     - 资源文件改为相对路径 (vite.config.js) `base: './'`
     - 处理 CSP 提示 (index.html) `<meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />`
+
+# protobufjs
+- 参考：https://github.com/protobufjs/protobuf.js/
+- 安装：`npm install protobufjs --save` 
+- 可选反射和静态代码引入，两者在性能方面没有显着差异
+- 1.反射 (Reflection)：
+    - 引入：`var protobuf = require("protobufjs");` 
+    - 使用：`protobuf.load("xxx.proto")`
+- 2.静态代码 (static code)：
+    - 安装 CLI：`npm install protobufjs-cli --save`
+
+# test
+- 参考：`https://github.com/nodejs/node-core-test`
+- 安装：`npm install test`
+- 使用：`node --test` 默认递归正则查找包含"test"关键字的文件，也可指定文件
