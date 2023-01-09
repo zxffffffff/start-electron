@@ -1,5 +1,6 @@
 # start-electron
  一个 Electron 跨平台脚手架项目，使用 Vue3 + Element Plus 构建
+- 运行 `npm install` 下载安装 `node_modules`
 - 使用 `npm run build` 编译生成 `dist` 前端项目资源
 - 运行 Electron `npx electron .` 或使用 `.vscode\launch.json` F5运行
 

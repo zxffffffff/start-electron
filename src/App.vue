@@ -2,21 +2,19 @@
 import { RouterLink, RouterView } from "vue-router";
 import HelloWorld from "./components/HelloWorld.vue";
 import { ElButton } from 'element-plus'
+
+function ipcOpenFile() {
+  window.electronAPI.openFile();
+}
 </script>
 
 <template>
   <header>
-    <img
-      alt="Vue logo"
-      class="logo"
-      src="@/assets/logo.svg"
-      width="125"
-      height="125"
-    />
+    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
-      <el-button>I am ElButton</el-button>
+      <el-button @click="ipcOpenFile()">I am ElButton</el-button>
 
       <nav>
         <RouterLink to="/">Home</RouterLink>
