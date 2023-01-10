@@ -29,11 +29,6 @@
     - 资源文件改为相对路径 (vite.config.js) `base: './'`
     - 处理 CSP 提示 (index.html) `<meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />`
 
-# test
-- 参考：`https://github.com/nodejs/node-core-test`
-- 安装：`npm install test`
-- 使用：`node --test` 默认递归正则查找包含"test"关键字的文件，也可指定文件
-
 # protobufjs
 - 参考：https://github.com/protobufjs/protobuf.js/
 - 安装：`npm install protobufjs --save` 
@@ -49,3 +44,14 @@
 - 参考：https://github.com/axios/axios
 - 安装：`npm install axios --save`
 - 使用：`const axios = require('axios');` 
+
+# test
+- 参考：`https://github.com/nodejs/node-core-test`
+- 安装：`npm install test`
+- 使用：`node --test` 默认递归正则查找包含"test"关键字的文件，也可指定文件
+
+# winston
+- 日志库
+- 参考：`https://github.com/winstonjs/winston`
+- 安装：`npm i winston --save`
+- 使用：`const winston = require('winston');` 
