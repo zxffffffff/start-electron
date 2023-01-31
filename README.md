@@ -46,12 +46,20 @@
 - 使用：`const axios = require('axios');` 
 
 # test
-- 参考：`https://github.com/nodejs/node-core-test`
+- 参考：https://github.com/nodejs/node-core-test
 - 安装：`npm install test`
 - 使用：`node --test` 默认递归正则查找包含"test"关键字的文件，也可指定文件
 
 # winston
 - 日志库
-- 参考：`https://github.com/winstonjs/winston`
+- 参考：https://github.com/winstonjs/winston
 - 安装：`npm i winston --save`
 - 使用：`const winston = require('winston');` 
+
+# ffi-napi
+- 调用 C/C++ 动态库
+- 参考：https://github.com/node-ffi-napi/node-ffi-napi
+  - https://www.cnblogs.com/silenzio/p/11606389.html
+  - https://www.jianshu.com/p/dd9463dead8c
+- 安装：`npm i ffi-napi`
+- 使用：`const myLib = new ffi.Library('myLib', { myFunc })`
