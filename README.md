@@ -55,3 +55,12 @@
 - 参考：https://github.com/winstonjs/winston
 - 安装：`npm i winston --save`
 - 使用：`const winston = require('winston');` 
+
+## node-addon-api
+- C++插件，node-addon-api is based on Node-API
+- 参考：https://github.com/nodejs/node-addon-api
+  - https://github.com/TooTallNate/node-bindings
+- 安装：`npm i node-addon-api`
+  - `npm i bindings`
+- 使用：编写 `binding.gyp` 配置文件，用于编译 C++
+  - package.json 配置 `"gypfile": true`
