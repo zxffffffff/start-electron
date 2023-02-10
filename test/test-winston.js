@@ -2,6 +2,10 @@ const test = require('test')
 var assert = require('assert');
 const winston = require('winston');
 const fs = require('fs');
+const path = require('path')
+
+const err_log = path.join(__dirname, 'error.log');
+const com_log = path.join(__dirname, 'combined.log');
 
 const logger = winston.createLogger({
   level: 'info',
@@ -12,8 +16,8 @@ const logger = winston.createLogger({
     // - Write all logs with importance level of `error` or less to `error.log`
     // - Write all logs with importance level of `info` or less to `combined.log`
     //
-    new winston.transports.File({ filename: 'error.log', level: 'error' }),
-    new winston.transports.File({ filename: 'combined.log' }),
+    new winston.transports.File({ filename: err_log, level: 'error' }),
+    new winston.transports.File({ filename: com_log }),
   ],
 });
 
@@ -27,7 +31,7 @@ if (process.env.NODE_ENV !== 'production') {
   }));
 }
 
-test('winston log test', t => {
+test('winston log test', async t => {
   /*
     error: 0,
     warn: 1,
@@ -46,7 +50,15 @@ test('winston log test', t => {
   logger.info(infoMsg);
   logger.debug(debugMsg);
 
-  fs.readFileSync('error.log', (err, data) => {
+  while (!fs.existsSync(err_log) || !fs.existsSync(com_log)) {
+    await new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve();
+      }, 100);
+    });
+  }
+
+  fs.readFileSync(err_log, (err, data) => {
     if (err) {
       assert.fail(err);
     } else {
@@ -54,7 +66,7 @@ test('winston log test', t => {
     }
   });
 
-  fs.readFileSync('combined.log', (err, data) => {
+  fs.readFileSync(com_log, (err, data) => {
     if (err) {
       assert.fail(err);
     } else {
@@ -65,6 +77,6 @@ test('winston log test', t => {
     }
   });
 
-  fs.rm('error.log');
-  fs.rm('combined.log');
+  fs.rm(err_log);
+  fs.rm(com_log);
 })
