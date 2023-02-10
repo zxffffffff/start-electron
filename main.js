@@ -4,8 +4,6 @@ var addon = require('bindings')('hello');
 
 // IPC 渲染器进程到主进程（双向）
 async function handleFileOpen() {
-  const r = addon.hello();
-
   const { canceled, filePaths } = await dialog.showOpenDialog()
   if (canceled) {
     return
