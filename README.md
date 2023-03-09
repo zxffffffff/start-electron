@@ -33,6 +33,12 @@
   - `npm run make`
   - todo：签名
 
+## Electron + Next.js
+- 参考：https://github.com/vercel/next.js/tree/canary/examples/with-electron
+https://github.com/vercel/next.js/tree/canary/examples/with-electron-typescript
+- 创建：`create-next-app`
+
+
 ## protobufjs
 - 参考：https://github.com/protobufjs/protobuf.js/
 - 安装：`npm install protobufjs --save` 
