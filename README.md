@@ -70,7 +70,8 @@ https://github.com/vercel/next.js/tree/canary/examples/with-electron-typescript
 - C++插件，node-addon-api is based on Node-API
 - 参考：https://github.com/nodejs/node-addon-api
   - https://github.com/TooTallNate/node-bindings
-- 安装：`npm i node-addon-api`
-  - `npm i bindings`
+- 安装：`npm i node-addon-api bindings`
 - 使用：编写 `binding.gyp` 配置文件，用于编译 C++
-  - package.json 配置 `"gypfile": true`
+- package.json 配置 `"gypfile": true`
+- 生成构建文件: `node-gyp configure`
+- 构建: `node-gyp build`
