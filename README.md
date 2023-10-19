@@ -2,6 +2,7 @@
  一个 Electron 跨平台脚手架项目，使用 Electron (Node.js) 和 Web (React + Typescript) 分别搭建两个工程
 
 > Electron development is unopinionated - there is no "one true way" to develop, build, package, or release an Electron application.
+
 > Electron 开发是不固定的 - 没有“一种真正的方法”来开发、构建、打包或发布 Electron 应用程序。
 
 
