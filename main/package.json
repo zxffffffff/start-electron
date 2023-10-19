@@ -1,0 +1,27 @@
+{
+  "name": "start-electron",
+  "version": "0.1.0",
+  "description": "start-electron",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "author": "zxffffffff",
+  "license": "MIT",
+  "devDependencies": {
+    "@electron-forge/cli": "^6.4.2",
+    "@electron-forge/maker-deb": "^6.4.2",
+    "@electron-forge/maker-rpm": "^6.4.2",
+    "@electron-forge/maker-squirrel": "^6.4.2",
+    "@electron-forge/maker-zip": "^6.4.2",
+    "@electron-forge/plugin-auto-unpack-natives": "^6.4.2",
+    "electron": "^27.0.1"
+  },
+  "dependencies": {
+    "bindings": "^1.5.0",
+    "electron-squirrel-startup": "^1.0.0",
+    "node-addon-api": "^7.0.0"
+  }
+}
