@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "start-electron",
   "main": "main.js",
+  "gypfile": true,
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",

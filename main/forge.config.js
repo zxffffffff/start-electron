@@ -1,7 +1,10 @@
 module.exports = {
   packagerConfig: {
     asar: true,
-    extraResource: ['../web/build'],
+    extraResource: [
+      '../web/build',
+      '../cpp/install/Release/bin/libsample-dynamic-lib.dylib'
+    ],
   },
   rebuildConfig: {},
   makers: [

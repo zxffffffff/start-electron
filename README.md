@@ -5,6 +5,11 @@
 
 > Electron 开发是不固定的 - 没有“一种真正的方法”来开发、构建、打包或发布 Electron 应用程序。
 
+调试/编译/打包需要分别进行：
+- 打包`web`输出到`build`，或调试直接`start`
+- 可选 C++ Addon：编译`cpp`输出到`install`，或调试使用`log`
+- 打包`main`输出到`out`，或调试直接`start`
+
 
 ## 一、创建 Web(React/TS) 工程
 - 参考：https://github.com/zxffffffff/start-web-react.git
@@ -35,7 +40,8 @@ npx electron-forge import
 - 参考：https://github.com/nodejs/node-addon-api
 - 参考：https://github.com/TooTallNate/node-bindings
 ```bash
-npm i node-addon-api bindings
+npm install -g node-gyp
+npm install node-addon-api bindings
 // 插件支持："gypfile": true
 // C++配置文件：binding.gyp
 node-gyp configure // 生成C++项目

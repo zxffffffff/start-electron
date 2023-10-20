@@ -1,6 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import IpcBridge from './platform/electron-bridge';
+
+function MyButton() {
+  const [count, setCount] = useState(0);
+
+  async function handleClick() {
+    let ret = '';
+    if (count === 0)
+      ret = await IpcBridge.Call('Init');
+    else
+      ret = await IpcBridge.Call('Func');
+    console.log(ret)
+    setCount(count + 1);
+  }
+
+  return (
+    <button onClick={handleClick}>
+      Clicked {count} times
+    </button>
+  );
+}
 
 function App() {
   return (
@@ -18,6 +39,7 @@ function App() {
         >
           Learn React
         </a>
+        <MyButton />
       </header>
     </div>
   );
