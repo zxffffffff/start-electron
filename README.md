@@ -40,7 +40,7 @@ npx electron-forge import
 - 参考：https://github.com/nodejs/node-addon-api
 - 参考：https://github.com/TooTallNate/node-bindings
 ```bash
-npm install -g node-gyp
+npm install --save-dev node-gyp
 npm install node-addon-api bindings
 // 插件支持："gypfile": true
 // C++配置文件：binding.gyp

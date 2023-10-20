@@ -3,7 +3,7 @@ module.exports = {
     asar: true,
     extraResource: [
       '../web/build',
-      '../cpp/install/Release/bin/libsample-dynamic-lib.dylib'
+      '../cpp/install/Release/bin'
     ],
   },
   rebuildConfig: {},

@@ -5,7 +5,7 @@ set root_path=%~dp0
 cd %root_path%
 
 :: cmake (Debug/Release)
-set config=Debug
+set config=Release
 set install_path=install\%config%
 echo config: %config%
 echo install_path: %install_path%

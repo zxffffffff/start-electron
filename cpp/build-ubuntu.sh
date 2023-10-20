@@ -4,7 +4,7 @@ root_path=$(dirname $(readlink -f "$0"))
 cd ${root_path}
 
 # cmake (Debug/Release)
-config=Debug
+config=Release
 install_path=install/${config}
 echo config: ${config}
 echo install_path: ${install_path}
