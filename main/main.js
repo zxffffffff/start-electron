@@ -8,16 +8,16 @@ async function handleCall(msg) {
     let path = '';
     let path2 = '';
     if (process.platform == 'darwin') {
-      if (app.isPackaged) path = `${process.resourcesPath}/libsample-dynamic-lib.dylib`;
+      if (app.isPackaged) path = `${process.resourcesPath}/bin/libsample-dynamic-lib.dylib`;
       else path = '../cpp/install/Release/bin/libsample-dynamic-lib.dylib'
     }
     else if (process.platform == 'win32') {
-      if (app.isPackaged) path = `${process.resourcesPath}/todo`;
-      else path = 'todo';
-      path2 = 'todo';
+      if (app.isPackaged) path = `${process.resourcesPath}/bin`;
+      else path = '../cpp/install/Release/bin'
+      path2 = 'sample-dynamic-lib.dll';
     }
     else {
-      // todo
+      // todo linux
     }
     const ok = await Addon.Init(path, path2)
     return `init ${ok ? 'ok' : 'err'}`;
