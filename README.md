@@ -14,10 +14,19 @@
 ## 一、创建 Web(React/TS) 工程
 - 参考：https://github.com/zxffffffff/start-web-react.git
 ```bash
-// 使用 React + Typescript 脚手架
+# 使用 React + Typescript 脚手架
 npx create-react-app start-electron-web --template typescript
-// 重命名工程：web
-// 资源路径配置："homepage": "./"
+# 重命名工程：web
+# 资源路径配置："homepage": "./"
+```
+
+### 可选：Redux
+- 参考：https://cn.redux.js.org/tutorials/quick-start
+```bash
+# 安装依赖
+npm install @reduxjs/toolkit react-redux
+# 添加代码：store.ts
+# 在 <App/> 上层添加 <Provider store={store}>
 ```
 
 
@@ -25,14 +34,14 @@ npx create-react-app start-electron-web --template typescript
 - 参考：https://www.electronjs.org/zh/docs/latest/tutorial/quick-start
 - 参考：https://www.electronforge.io/cli
 ```bash
-// 新建工程文件夹：main
+# 新建工程文件夹：main
 npm init
-npm install --save-dev electron --verbose // 下载巨大，用verbose查看进度
-// 添加代码：main.js preload.js
+npm install --save-dev electron --verbose # 下载巨大，用verbose查看进度
+# 添加代码：main.js preload.js
 
 npm install --save-dev @electron-forge/cli
 npx electron-forge import
-// 打包Web：extraResource: ['../web/build']
+# 打包Web：extraResource: ['../web/build']
 ```
 
 ### 可选：C++ Addon
@@ -42,10 +51,11 @@ npx electron-forge import
 ```bash
 npm install --save-dev node-gyp
 npm install node-addon-api bindings
-// 插件支持："gypfile": true
-// C++配置文件：binding.gyp
-node-gyp configure // 生成C++项目
-node-gyp build     // 编译C++项目
+# 插件支持："gypfile": true
+# C++配置文件：binding.gyp
+node-gyp configure # 生成C++项目
+node-gyp build     # 编译C++项目
+npm install        # 同时执行 configure + build
 ```
 
 
