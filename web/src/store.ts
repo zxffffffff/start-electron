@@ -38,13 +38,13 @@ export const useAppDispatch: () => AppDispatch = useDispatch
 export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector
 
 // demo
-function how_to_set() {
-  const dispatch = useAppDispatch();
-  dispatch(increment())
-  dispatch(incrementByAmount(123))
-  dispatch(decrement())
-}
-function how_to_get() {
-  const count = useAppSelector(selectCount);
-  console.log(count);
-}
+//function how_to_set() {
+//  const dispatch = useAppDispatch();
+//  dispatch(increment())
+//  dispatch(incrementByAmount(123))
+//  dispatch(decrement())
+//}
+//function how_to_get() {
+//  const count = useAppSelector(selectCount);
+//  console.log(count);
+//}
